@@ -1,17 +1,17 @@
 
 public class Rental {
-	private int daysREnted;
+	private int daysRented;
 	private Movie movie;
 	
-	public Rental(int daysREnted, Movie movie) {
-		this.daysREnted = daysREnted;
+	public Rental(int daysRented, Movie movie) {
+		this.daysRented = daysRented;
 		this.movie = movie;
 	}
-	public int getDaysREnted() {
-		return daysREnted;
+	public int getDaysRented() {
+		return daysRented;
 	}
-	public void setDaysREnted(int daysREnted) {
-		this.daysREnted = daysREnted;
+	public void setDaysRented(int daysRented) {
+		this.daysRented = daysRented;
 	}
 	public Movie getMovie() {
 		return movie;
