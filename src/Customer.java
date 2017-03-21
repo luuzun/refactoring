@@ -1,9 +1,5 @@
-
-
 import java.util.ArrayList;
 import java.util.List;
-
-import org.omg.PortableServer.ThreadPolicyOperations;
 
 public class Customer {
 	private String name;
@@ -34,6 +30,18 @@ public class Customer {
 		return sb.toString();
 	}
 
+	public String htmlStatement(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("<h1><em>" + getName()+"고객님의 대여기록</ed></h1><p>\n");
+		
+		for(Rental each : rentals){
+			sb.append(String.format("nbsp;nbsp;\t%s \t %s<br>%n", each.getMovie().getTitle(), each.getCharge()));
+		}//for loop
+		
+		sb.append(String.format("<p>누적대여료: <em>%s</em>%n<p>적립포인트 : <em>%s</em></p>%n", getTotalCharge(), getFrequentRenterPoints()));
+		return sb.toString();
+	}
+	
 	private int getFrequentRenterPoints() {
 		int frequentRenterPoints = 0;//적립포인트
 		for(Rental each : rentals){
