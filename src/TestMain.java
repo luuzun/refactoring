@@ -1,4 +1,6 @@
-
+import dto.Customer;
+import dto.Movie;
+import dto.Rental;
 
 public class TestMain {
 
@@ -27,9 +29,9 @@ public class TestMain {
 		c2.addRental(r4);
 		c2.addRental(r6);
 		
-		System.out.println(c1.statement());
+		System.out.println(c1.textStatement());
 		System.out.println("=======================");
-		System.out.println(c2.statement());
+		System.out.println(c2.textStatement());
 		
 		System.out.println("============= html ===========");
 		System.out.println(c1.htmlStatement());
